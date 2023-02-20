@@ -25,6 +25,7 @@ const onSubmitForm = event => {
   console.log(myForm);
   event.currentTarget.reset();
   removeStorItem();
+  myForm = {};
 };
 
 loginForm.addEventListener('submit', onSubmitForm);

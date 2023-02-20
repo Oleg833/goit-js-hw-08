@@ -42,15 +42,15 @@ function onFormInput(event) {
 recoveryData();
 function recoveryData() {
   if (localStorage.getItem(LOCALSTORAGE_KEY)) {
-    const data = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
+    const savedForm = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
     myForm = {
-      email: data.email,
-      message: data.message,
+      email: savedForm.email,
+      message: savedForm.message,
     };
-    inputEmail.value = data.email || '';
-    textareaInput.value = data.message || '';
+    inputEmail.value = savedForm.email || '';
+    textareaInput.value = savedForm.message || '';
     // console.log(`MyRecoveryForm =`, myForm);
-    // console.log(`Recovered JSON.parse = `, data);
+    // console.log(`Recovered JSON.parse = `, savedForm);
   }
 }
 function removeStorItem() {

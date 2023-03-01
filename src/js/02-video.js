@@ -1,4 +1,6 @@
 import throttle from 'lodash.throttle';
+// import debounce from 'lodash.debounce';
+
 import Player from '@vimeo/player';
 
 const iframe = document.querySelector('iframe');
